@@ -14,12 +14,12 @@ static io_service service;
 static ip::tcp::acceptor acceptor{service, ip::tcp::endpoint{ip::tcp::v4(), 8001}};
 typedef boost::shared_ptr<ip::tcp::socket> socket_ptr;
 static std::vector<socket_ptr> sockets;
-static boost::mutex mutex1,mutex_socket,mutex_clients;
+static boost::mutex mutex1, mutex_socket, mutex_clients;
 static boost::recursive_mutex mutex;
-static std::vector<int> num_close;
+static std::vector <int> num_close;
 void clear_buf(char * buf,int size)
 {
-    for (int i=0;i<size;++i)
+    for (int i=0; i<size; ++i)
     {
         buf[i]="/0";
     }
