@@ -1,4 +1,4 @@
-/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sergo/Desktop/lab7/server_asio
+C:\Users\79153\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Project\laba_7\lab_07
 CMake Error at CMakeLists.txt:14 (include):
   include could not find load file:
 
