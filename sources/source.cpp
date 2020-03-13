@@ -22,7 +22,7 @@ void clear_buf(char * buf,int size)
 {
     for (int i=0;i<size;++i)
     {
-        buf[i]='/0';
+        buf[i]="/0";
     }
 }
 
