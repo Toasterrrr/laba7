@@ -7,7 +7,7 @@
 #include <boost/thread/recursive_mutex.hpp>
 #include <system_error>
 #include <unistd.h>
-static const int buf_size =500;
+static const int buf_size = 500;
 static boost::thread_group threads;
 using namespace boost::asio;
 static io_service service;
