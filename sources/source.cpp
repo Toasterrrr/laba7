@@ -31,7 +31,7 @@ struct client
     bool _status = true;
     void write (std:: string msg)
     {
-        _sock.write_some(boost::asio::buffer(msg,7));
+        _sock.write_some(boost::asio::buffer(msg, 7));
     }
     std::string _reply;
     void read_str()
@@ -39,10 +39,10 @@ struct client
         if (_sock.available())
         {
             char buf[200] ;
-            int bytes=_sock.read_some(boost::asio::buffer(buf,200));
-            for (int i=0;i<bytes;++i)
+            int bytes = _sock.read_some(boost::asio::buffer(buf, 200));
+            for (int i=0; i<bytes; ++i)
             {
-                _reply[i]=std::move(buf[i]);
+                _reply[i] = std::move(buf[i]);
             }
         }
 
@@ -65,8 +65,8 @@ struct client
             {
                 _sock.close();
             }
-            _status=false;
-            std::cout<<"no client";
+            _status = false;
+            std::cout << "no client";
 
         }
 
@@ -98,13 +98,14 @@ void communication_with_server()
         {
             a->communicate();
         }
-        for (auto i=clients.begin();i!=clients.end();)
+        for (auto i = clients.begin(); i! = clients.end();)
         {
             if (!(i->get()->_status))
             {
                 i=clients.erase(i);
             }
-            else{
+            else
+            {
                 ++i;
             }
         }
@@ -113,7 +114,6 @@ void communication_with_server()
 
 void access_func()
 {
-
     while(true)
     {
         client_ptr one(new client);
