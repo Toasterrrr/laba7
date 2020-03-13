@@ -17,9 +17,9 @@ static std::vector<socket_ptr> sockets;
 static boost::mutex mutex1, mutex_socket, mutex_clients;
 static boost::recursive_mutex mutex;
 static std::vector <int> num_close;
-void clear_buf(char * buf,int size)
+void clear_buf(char * buf, int size)
 {
-    for (int i=0; i<size; ++i)
+    for (int i=0; i < size; ++i)
     {
         buf[i]="/0";
     }
@@ -28,7 +28,7 @@ void clear_buf(char * buf,int size)
 struct client
 {
     ip::tcp::socket _sock{service};
-    bool _status=true;
+    bool _status = true;
     void write (std:: string msg)
     {
         _sock.write_some(boost::asio::buffer(msg,7));
